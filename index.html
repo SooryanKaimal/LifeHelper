@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free tools: To-Do List, Budget Calculator, Unit Converter, Name Generator, Countdown Timer, BMI Calculator, Password Generator, Text-to-Speech.">
+    <meta name="keywords" content="to-do list online, budget calculator, unit converter, random name generator, countdown timer, bmi calculator, password generator, text to speech, free tools">
+    <meta name="author" content="Daily Life Helper Hub">
+    <title>Daily Life Helper Hub - Free Tools</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">LifeHelper</div>
+        <div class="hamburger">☰</div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#tools" class="nav-link">Tools</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Daily Life Helper Hub</h1>
+        <p>Simplify Your Day with Free Tools</p>
+        <a href="#tools" class="btn">Explore Tools</a>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="tools-section">
+        <h2>Our Tools</h2>
+        <div class="tools-grid">
+            <!-- Tool 1: To-Do List -->
+            <div class="tool-card">
+                <h3>To-Do List</h3>
+                <input type="text" id="todo-input" placeholder="Add a task">
+                <button onclick="addTask()">Add</button>
+                <ul id="todo-list"></ul>
+            </div>
+
+            <!-- Tool 2: Budget Calculator -->
+            <div class="tool-card">
+                <h3>Budget Calculator</h3>
+                <input type="number" id="income" placeholder="Income ($)" step="0.01">
+                <input type="number" id="expense" placeholder="Expense ($)" step="0.01">
+                <button onclick="calcBudget()">Calculate</button>
+                <p id="budget-output"></p>
+            </div>
+
+            <!-- Tool 3: Unit Converter -->
+            <div class="tool-card">
+                <h3>Unit Converter (Length)</h3>
+                <input type="number" id="unit-input" placeholder="Enter value">
+                <select id="unit-from">
+                    <option value="m">Meters (m)</option>
+                    <option value="ft">Feet (ft)</option>
+                </select>
+                <select id="unit-to">
+                    <option value="ft">Feet (ft)</option>
+                    <option value="m">Meters (m)</option>
+                </select>
+                <button onclick="convertUnit()">Convert</button>
+                <p id="unit-output"></p>
+            </div>
+
+            <!-- Tool 4: Random Name Generator -->
+            <div class="tool-card">
+                <h3>Random Name Generator</h3>
+                <button onclick="generateName()">Generate</button>
+                <p id="name-output"></p>
+            </div>
+
+            <!-- Tool 5: Countdown Timer -->
+            <div class="tool-card">
+                <h3>Countdown Timer</h3>
+                <input type="number" id="timer-minutes" placeholder="Minutes" min="1">
+                <button onclick="startCountdown()">Start</button>
+                <button onclick="stopCountdown()">Stop</button>
+                <p id="timer-output">00:00</p>
+            </div>
+
+            <!-- Tool 6: BMI Calculator -->
+            <div class="tool-card">
+                <h3>BMI Calculator</h3>
+                <input type="number" id="weight" placeholder="Weight (kg)" step="0.1">
+                <input type="number" id="height" placeholder="Height (m)" step="0.01">
+                <button onclick="calcBMI()">Calculate</button>
+                <p id="bmi-output"></p>
+            </div>
+
+            <!-- Tool 7: Password Generator -->
+            <div class="tool-card">
+                <h3>Password Generator</h3>
+                <input type="number" id="pass-length" placeholder="Length (8-20)" min="8" max="20">
+                <button onclick="generatePassword()">Generate</button>
+                <p id="pass-output"></p>
+            </div>
+
+            <!-- Tool 8: Text-to-Speech -->
+            <div class="tool-card">
+                <h3>Text-to-Speech</h3>
+                <textarea id="tts-input" placeholder="Enter text to speak"></textarea>
+                <select id="tts-voice"></select>
+                <button onclick="speakText()">Speak</button>
+                <button onclick="stopSpeech()">Stop</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>Daily Life Helper Hub offers free, easy-to-use tools for your everyday needs.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Daily Life Helper Hub. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
